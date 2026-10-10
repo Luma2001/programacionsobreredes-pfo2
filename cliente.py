@@ -18,7 +18,7 @@ def registrar_usuario():
     print("\n--- REGISTRO DE USUARIO ---")
     #.input(...).strip() solicitamos por consola nombre y contrasena. .strip() elimina espacios en blanco al inicio y final de la cadena ingresada
     usuario = input("Ingresa nombre de usuario: ").strip()
-    password = getpass.getpass("Ingresa contraseña: ").strip()
+    password = input("Ingresa contraseña: ").strip()
 
     #Validación previa: Si el usuario o la contraseña están vacíos, se muestra un mensaje de error y se retorna sin hacer la petición
     if not usuario or not password:
@@ -85,8 +85,7 @@ def ver_pantalla_tareas():
         if respuesta.status_code == 200:
             print(f"✔ Acceso concedido a /tareas (HTTP 200 OK)")
             print("✔ El servidor entregó la página HTML de bienvenida correctamente.")
-            print("👉 Puedes verla con diseño visual abriendo en tu navegador:")
-            print("   http://127.0.0.1:5000/tareas")
+            print("👉 INGRESAR: http://127.0.0.1:5000/tareas")
         else:
             print(f"❌ Error al consultar tareas (HTTP {respuesta.status_code})")
     except requests.exceptions.ConnectionError:
@@ -103,7 +102,7 @@ def menu_principal():
         print("   SISTEMA DE GESTIÓN DE TAREAS")
         print("===============================")
         print("1. Registrar nuevo usuario")
-        print("2. Iniciar sesión")
+        print("2. Iniciar sesión (no se mostrará la contraseña por seguridad)")
         print("3. Consultar /tareas directamente")
         print("4. Salir")
         
