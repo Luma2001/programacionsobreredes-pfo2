@@ -1,5 +1,7 @@
 # PFO 2: Sistema de Gestión de Tareas con API y Base de Datos
 
+![alt text](image-1.png)
+
 API REST desarrollada en **Python** utilizando: 
 * microframework **Flask**
 * persistencia relacional en **SQLite**
