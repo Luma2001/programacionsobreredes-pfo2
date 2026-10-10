@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PFO 2 - API REST Flask & SQLite</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: #f8fafc; color: #1e293b; margin: 0; padding: 40px 20px; display: flex; justify-content: center; }
+        .container { max-width: 800px; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+        h1 { color: #0f172a; border-bottom: 2px solid #e2e8f0; padding-bottom: 12px; }
+        h2 { color: #334155; margin-top: 28px; }
+        .badge { background: #e0f2fe; color: #0369a1; padding: 4px 8px; border-radius: 6px; font-size: 14px; font-weight: 600; }
+        code { background: #f1f5f9; padding: 2px 6px; border-radius: 4px; font-family: monospace; }
+        ul { line-height: 1.8; }
+        .endpoints { background: #f8fafc; border-left: 4px solid #3b82f6; padding: 15px; margin: 15px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sistema de Gestión de Tareas <span class="badge">PFO 2</span></h1>
+        <p>Proyecto práctico de Programación en Redes: API REST con Flask, persistencia relacional en SQLite y cliente de consola.</p>
+        
+        <h2>Endpoints de la API</h2>
+        <div class="endpoints">
+            <p><strong>POST /registro:</strong> Recibe credenciales en JSON y almacena contraseñas hasheadas.</p>
+            <p><strong>POST /login:</strong> Comprobación de credenciales mediante algoritmos de hash seguro.</p>
+            <p><strong>GET /tareas:</strong> Vista HTML de bienvenida y confirmación de servicio activo.</p>
+        </div>
+
+        <h2>Tecnologías Utilizadas</h2>
+        <ul>
+            <li><strong>Flask:</strong> Microframework para endpoints REST.</li>
+            <li><strong>Werkzeug Security:</strong> Hashing criptográfico irreversible.</li>
+            <li><strong>SQLite:</strong> Motor de base de datos embebido sin servidor.</li>
+            <li><strong>Requests:</strong> Cliente HTTP interactivo en consola.</li>
+        </ul>
+    </div>
+</body>
+</html>
