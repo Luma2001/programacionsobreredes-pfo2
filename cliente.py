@@ -4,6 +4,9 @@ import sys
 #Módulo de requests para realizar peticiones HTTP al servidor Flask
 import requests
 
+# Módulo para ocultar la entrada de contraseña en la consola
+import getpass  
+
 # URL base del servidor Flask
 BASE_URL = "http://127.0.0.1:5000"
 
@@ -15,7 +18,7 @@ def registrar_usuario():
     print("\n--- REGISTRO DE USUARIO ---")
     #.input(...).strip() solicitamos por consola nombre y contrasena. .strip() elimina espacios en blanco al inicio y final de la cadena ingresada
     usuario = input("Ingresa nombre de usuario: ").strip()
-    password = input("Ingresa contraseña: ").strip()
+    password = getpass.getpass("Ingresa contraseña: ").strip()
 
     #Validación previa: Si el usuario o la contraseña están vacíos, se muestra un mensaje de error y se retorna sin hacer la petición
     if not usuario or not password:
@@ -49,7 +52,8 @@ def iniciar_sesion():
     """Solicitar credenciales, enviar POST a /login y, si es correcto, acceder a /tareas."""
     print("\n--- INICIO DE SESIÓN ---")
     usuario = input("Ingresa tu usuario: ").strip()
-    password = input("Ingresa tu contraseña: ").strip()
+    #getpass.getpass(...) permite ingresar la contraseña sin que se muestre en la consola, mejorando la seguridad.
+    password = getpass.getpass("Ingresa tu contraseña: ").strip()
 
     payload = {"usuario": usuario, "contraseña": password}
 

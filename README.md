@@ -55,7 +55,12 @@ En una segunda terminal paralela, ejecuta:
 ```bash
 python cliente.py
 ```
-Aparecerá el menú interactivo para registrar usuarios, iniciar sesión o consultar el endpoint de bienvenida de `/tareas`.
+Aparecerá: 
+* Menú interactivo para registrar usuarios, 
+* Iniciar sesión 
+* Consultar el endpoint de bienvenida de `http://127.0.0.1:5000/tareas`.
+
+![Pantalla de](image.png)
 
 ### 3. Ejecutar las Pruebas Automatizadas
 Para validar los códigos de estado HTTP (200, 201, 400, 401, 409) y el comportamiento defensivo:
@@ -63,6 +68,9 @@ Para validar los códigos de estado HTTP (200, 201, 400, 401, 409) y el comporta
 ```bash
 python test_api.py
 ```
+
+---
+github pages: https://luma2001.github.io/programacionsobreredes-pfo2/
 
 ---
 
