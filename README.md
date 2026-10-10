@@ -1,6 +1,6 @@
 # PFO 2: Sistema de Gestión de Tareas con API y Base de Datos
 
-![alt text](image-1.png)
+![alt text](img/image-1.png)
 
 API REST desarrollada en **Python** utilizando: 
 * microframework **Flask**
@@ -62,7 +62,7 @@ Aparecerá:
 * Iniciar sesión 
 * Consultar el endpoint de bienvenida de `http://127.0.0.1:5000/tareas`.
 
-![Pantalla de](image.png)
+![Pantalla de](img/image.png)
 
 ### 3. Ejecutar las Pruebas Automatizadas
 Para validar los códigos de estado HTTP (200, 201, 400, 401, 409) y el comportamiento defensivo:
